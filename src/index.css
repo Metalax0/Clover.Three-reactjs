@@ -12,6 +12,7 @@ body,html
 	margin: 0;
 	padding: 0;
 	height: 100%;
+	
 }
 
 /* Applying style to entire navigation bar*/
@@ -60,6 +61,7 @@ section
 	flex-direction: column;
 	padding: 0% 1%;
 	gap: 10vh;
+	
 }
 
 /* Reseting margin and padding property of h1 and p to 0 */
