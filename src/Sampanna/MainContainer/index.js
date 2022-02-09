@@ -1,6 +1,6 @@
 const MainContainer = (props) => {
   return (
-    <div className="parallax-3">
+    <div className="Main-Container">
       {props.left_content}
       {props.right_content}
     </div>

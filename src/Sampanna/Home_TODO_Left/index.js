@@ -2,14 +2,14 @@ const Home_TODO_left = () => {
   return (
     // Left Column Container
     <div className="column-left">
-      <h1 className="sub-heading">
-        <span className="heading-no-color">To-Do-List</span>
+      <h1 className="content-title">
+        <span className="text-no-color">To-Do-List</span>
         <br />
-        <span className="heading-color">AND</span>
-        <span className="heading-no-color">Puzzle</span>
+        <span className="text-color">AND</span>
+        <span className="text-no-color">Puzzle</span>
       </h1>
 
-      <p className="title-description">
+      <p className="description">
         <br />
         The To-Do-List program, helps user keep track of their activities by
         setting tasks, adding new ones, marking them as complete and finally
