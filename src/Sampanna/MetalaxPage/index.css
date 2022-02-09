@@ -1,0 +1,294 @@
+img
+{
+	width: 1.8vw;
+	height: 1.8vw;
+}
+
+.todo-button-container img
+{
+	width: 2.5vw;
+	height: 2.5vw;
+}
+
+p b{
+	color: #0FFF95 ;
+}
+
+input[type=checkbox]
+{
+	width: 2vw;
+	height: 2vw;
+	cursor: pointer;
+}
+
+button
+{
+	cursor: pointer;
+}
+
+/* Applying flex property to navigation menu items*/
+.flex-navmenu
+{
+	display: flex;
+	gap: 9vh;
+}
+
+/* Styling nagivation bar logo (text)*/
+.navbar-logo-text
+{
+	font-family: 'Monoton', cursive;
+	font-size: 1.2vw;
+}
+
+/* First half of title text "CLO" */
+.heading-color
+{
+	color: #0FFF95;
+}
+
+/* Second half of title text "VER" */
+.heading-no-color
+{
+	color: white;
+}
+
+/* hmm */
+.active_menu
+{
+	color: #0FFF95;
+	border-bottom: 2px solid;
+}	
+
+/* Applying css to functionality section of the page */
+#Metalax-ToDo-column-right, #Metalax-Puzzle-column-left
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background-color: #00E099;
+	outline: 5px solid white;
+
+	gap: 2vw;
+	padding: 1vw 0;
+}
+
+.deleteButton
+{
+	padding: 0px;
+	margin: 0px;
+	height: 2vw;
+	width: 2vw;
+}
+
+.deleteButton:hover
+{
+	background-color: black;
+}
+
+/* Title of components (to do and puzzle) */
+.todo-heading
+{
+	border: none;
+	background-color: transparent;
+
+	font-family: 'Bebas Neue', cursive;
+	font-size: 2vw;
+	text-align: center;	
+	width: 25vw;
+}
+
+/* Hmm */
+#todo-checkbox-container
+{
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+
+	width: 35vw;
+	height: 40vw;
+	gap: 1.8vw;
+	padding-right: 1vw;
+}
+
+/* Hmm */
+.todo-option
+{
+	border: none;
+	background: transparent;
+
+	font-family: 'Prompt', sans-serif;
+	font-size: 1.3vw;
+	font-weight: bold;
+	width: 25vw;
+}
+
+.task
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2vw;
+}
+
+/* Styling placehodler of all input fields */
+::placeholder
+{
+	color: black;
+}
+
+/* Applying style to Sub headings */
+.title-heading
+{
+	font-family: 'Bebas Neue', cursive;
+	letter-spacing: 4px;
+	font-size: 4vw;
+}
+
+.newTask
+{
+	width: 12vw;
+	height: 10vh;
+	background-color: white;
+
+	font-family: 'Prompt', sans-serif;
+	font-size: 1.3vw;
+	font-weight: bold;
+	color: black;
+
+	border: 3px solid black;
+	border-radius: 0.5vw;
+}
+
+.newTask:hover
+{
+	color: white;
+	background-color: black;
+	border: 3px solid white;
+}
+
+/*
+--------------
+--------------
+CSS FOR PUZZLE
+--------------
+--------------
+*/
+
+#puzzle-button-container
+{
+	display: flex;
+	justify-content: space-between;
+	width: 40vw;
+}
+
+.puzzle-heading
+{
+	font-family: 'Bebas Neue', cursive;
+	font-size: 2.5vw;
+	letter-spacing: 0.2vw;
+	text-align: center;
+}
+
+/* Hmm */
+#puzzle-container
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 40vw;
+	height: 25vw;
+	gap: 1.8vw;
+}
+
+.checkAnswer
+{
+	width: 12vw;
+	height: 6vh;
+	background-color: white;
+
+	font-family: 'Prompt', sans-serif;
+	font-size: 1.3vw;
+	font-weight: bold;
+	color: black;
+
+	border: 3px solid black;
+	border-radius: 0.5vw;
+}
+
+.puzzleNext, .puzzlePrevious
+{
+	width: 5vw;
+	height: 6vh;
+	background-color: white;
+
+	font-family: 'Prompt', sans-serif;
+	font-size: 1.3vw;
+	font-weight: bold;
+	color: black;
+
+	border: 3px solid black;
+	border-radius: 0.5vw;
+}
+
+.checkAnswer:hover, .puzzleNext:hover, .puzzlePrevious:hover
+{
+	color: white;
+	background-color: black;
+	border: 3px solid white;
+}
+
+/* Applying flexbox property and hiding all puzzles by default */
+.puzzle
+{
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	gap: 2vw;
+}
+
+/* Setting display for first puzzle to make it visible */
+#puzzle1
+{
+	display: flex;
+}
+
+#puzzle1, #puzzle3
+{
+	gap: 3vw;
+}
+
+/* Hmm */
+.puzzle-text
+{
+	font-family: 'Prompt', sans-serif;
+	font-size: 1.4vw;
+	line-height: 5vh;
+	text-align: justify;
+	text-justify: inter-word;
+	color: black;
+}
+
+/* Hmm */
+.puzzle-answer
+{
+	border: 3px solid black;
+	border-radius: 0.5vw;
+	text-align: center;	
+
+	font-family: 'Prompt', sans-serif;
+	font-size: 1.3vw;
+	font-weight: bold;
+	width: 25vw;
+	height: 3vw;
+}
+
+.puzzle-note
+{
+	font-family: 'Prompt', sans-serif;
+	font-size: 1.2vw;
+	letter-spacing: 0.2vw;
+	text-align: center;
+}
+

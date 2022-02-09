@@ -85,7 +85,7 @@ p b {
 }
 
 /* Applying style to "Scroll down" text in Home-MainContainer-Lower*/
-label {
+.label-ScrollDown {
   font-family: "Prompt", sans-serif;
   font-size: 1.5vw;
   color: white;
