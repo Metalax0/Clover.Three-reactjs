@@ -1,7 +1,7 @@
 const MetalaxPuzzleLeft = () => {
     return(
         // Left Column Container
-        <div className="column-left">
+        <div className="column-left" id ='Metalax-Puzzle-column-left'>
             <div id="puzzle-container">
                 {/* Puzzle 1 */}
                 <div id = "puzzle1" className="puzzle">

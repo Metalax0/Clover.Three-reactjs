@@ -7,7 +7,7 @@ function Navigation(props) {
             <div className="image-navbar">
                 {/* <!-- <img src="../resources/logo1.png"> --> */}
                 <div className="navbar-logo-text">
-                    <span className="heading-color">CLO</span><span className="heading-no-color">VER</span>    
+                    <span className="text-color">CLO</span><span className="text-no-color">VER</span>    
                 </div>      
             </div>
 

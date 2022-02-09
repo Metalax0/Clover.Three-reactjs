@@ -46,7 +46,7 @@ const MetalaxToDoRight = () => {
 
   return (
     // Right Column Container
-    <div className="column-right">
+    <div className="column-right" id="Metalax-ToDo-column-right">
       <input
         className="todo-heading"
         type="text"
@@ -55,14 +55,19 @@ const MetalaxToDoRight = () => {
 
       <div id="todo-checkbox-container">
         <div className="task">
-          <input type="checkbox" onClick={() => {strikeTask(this)}} />
+          <input
+            type="checkbox"
+            onClick={() => {
+              strikeTask(this);
+            }}
+          />
           <input
             className="todo-option"
             type="text"
             placeholder="Write Task Name Here"
           />
           <button className="deleteButton" onClick={deleteTask(this)}>
-            <img src="../resources/icon_delete.png" />
+            <img src="/Resources/icon_delete.png" />
           </button>
         </div>
 
@@ -74,7 +79,7 @@ const MetalaxToDoRight = () => {
             placeholder="Write Task Name Here"
           />
           <button className="deleteButton" onClick={deleteTask(this)}>
-            <img src="../resources/icon_delete.png" />
+            <img src="/Resources/icon_delete.png" />
           </button>
         </div>
 
@@ -86,7 +91,7 @@ const MetalaxToDoRight = () => {
             placeholder="Write Task Name Here"
           />
           <button className="deleteButton" onClick={deleteTask(this)}>
-            <img src="../resources/icon_delete.png" />
+            <img src="/Resources/icon_delete.png" />
           </button>
         </div>
 
@@ -98,7 +103,7 @@ const MetalaxToDoRight = () => {
             placeholder="Write Task Name Here"
           />
           <button className="deleteButton" onClick={deleteTask(this)}>
-            <img src="../resources/icon_delete.png" />
+            <img src="/Resources/icon_delete.png" />
           </button>
         </div>
 
@@ -110,7 +115,7 @@ const MetalaxToDoRight = () => {
             placeholder="Write Task Name Here"
           />
           <button className="deleteButton" onClick={deleteTask(this)}>
-            <img src="../resources/icon_delete.png" />
+            <img src="/Resources/icon_delete.png" />
           </button>
         </div>
       </div>

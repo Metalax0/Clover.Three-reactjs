@@ -29,7 +29,7 @@ const HomePageContent = () => {
         {/* Bottom Container  */}
         <div className="Home-MainContent-Lower">
           {/* Label for "Scroll down" */}
-          <label>Scroll Down</label>
+          <label className = "label-ScrollDown">Scroll Down</label>
         </div>
       </section>
     </div>
