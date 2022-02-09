@@ -3,14 +3,14 @@ const Home_WCounter_Right = () => {
         <>
             {/* Right Column Container */}
             <div className="column-right">
-                <h1 className="sub-heading">
-                    <span className="heading-no-color">Word Counter</span>
+                <h1 className="content-title">
+                    <span className="text-no-color">Word Counter</span>
                     <br />
-                    <span className="heading-color">AND</span>
-                    <span className="heading-no-color">Coin Flip</span>
+                    <span className="text-color">AND</span>
+                    <span className="text-no-color">Coin Flip</span>
                 </h1>
 
-                <p className="title-description">
+                <p className="description">
                     <br />
                     The Word Counter program takes in user's input in a text field and gives out word count, letter count and sentence count as a result.
                     The Coin Flip program, on a click of a button will give the output of either heads or tails along with their occurance frequency.
