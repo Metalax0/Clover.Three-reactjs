@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link,Route,Routes} from 'react-router-dom';
-import TicTacToe from '../TicTacToe/Index';
-function Navigation() {
+function Navigation(props) {
   return (<div>
      <nav className="flex-navbar">
             {/* <!-- NavBar Logo --> */}
@@ -16,33 +15,27 @@ function Navigation() {
             <div className="flex-navmenu">
                 {/* <!-- Navigation Bar Menu Item 1 --> */}
                 <div>
-                    < Link to="/" className = "active_menu"> Home </Link>
+                    < Link to='/' className = "active_menu"> Home </Link>
                 </div>
 
                 {/* <!-- Navigation Bar Menu Item 2 --> */}
                 <div>
-                    <Link to="avash"> Dr Senior </Link>
+                    <Link to='/avash'> Dr Senior </Link>
                 </div>
 
                 {/* <!-- Navigation Bar Menu Item 3 --> */}
                 <div>
-                    <Link to="sampanna"> Metalax </Link>
+                    <Link to='/sampanna'> Metalax </Link>
                 </div>
 
                 {/* <!-- Navigation Bar Menu Item 4 --> */}
                 <div>
-                    <Link to="ashrin"> Ashrin </Link>
+                    <Link to='/ashrin'> Ashrin </Link>
                 </div>
 
             </div>
         </nav>
-        {/* <Routes>
-          <Route path="/" element={<App />}></Route>
-          <Route path="metal" element={<Notfound />}></Route>
-          <Route path="avash" element={<NotFound />}></Route>
-          <Route path="ashrin" element={<TicTacToe />}></Route>
-        </Routes> */}
- 
+        {props.children}
   </div>);
 }
 
