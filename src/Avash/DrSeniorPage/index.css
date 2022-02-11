@@ -1,0 +1,176 @@
+.flex-item-left{
+	display: flex;
+	flex-direction: column;
+	gap: 2vw;
+	height: 35vw;
+}
+
+.title-heading{
+	font-family: 'Bebas Neue', cursive;
+	outline: 0px;
+	letter-spacing: 4px;
+	font-size: 4vw;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+
+.title-heading-description{
+	font-family: 'Prompt', sans-serif;
+	font-size: 1.4vw;
+	line-height: 5vh;
+	text-align: justify;
+	text-justify: inter-word;
+	color: white;
+	margin: 0;
+	padding: 0;
+} 
+
+textarea{
+	width: 44vw;
+	height: 64vh;
+	resize: none;
+	font-size: 1.3vw;
+	font-family: 'Prompt', sans-serif;
+	border-radius: 10px;
+	opacity: 0.9;
+}
+
+.displayresult{
+	display: flex;
+	color: white;
+	justify-content: center;
+	gap: 8.6vw;
+	font-size: 1.4vw;
+	padding-top: 10px;
+}
+
+.result{
+	display: flex;
+	justify-content: space-evenly;
+	justify-content: center;
+	gap: 13vw;
+	color: white;
+	font-size: 1.2vw;
+	padding-top: 5px;
+}
+
+.botton-left-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 230vw; 
+	height: 68vh;
+	gap: 1vw;
+}
+
+.coinflipresult{
+	display: flex;
+	justify-content: center;
+	height: 5vw;
+	font-size: 2.5vw;
+	color: white;
+}
+
+.headandtailcount{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	/*gap: 0.5vw;*/
+	font-family: 'Prompt', sans-serif;
+	font-size: 1.5vw;
+	font-weight: bold;
+	color: white;
+	padding-bottom: 15px;
+}
+
+.counts{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 5%;
+}
+
+.percents{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 24%;
+	padding: 10px;
+
+}
+
+.totalflips{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 1vw;
+	font-family: 'Prompt', sans-serif;
+	font-size: 1.5vw;
+	font-weight: bold;
+	color: white;
+}
+
+.bottom-right-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 30vw;
+}
+
+.title-heading{
+	font-family: 'Bebas Neue', cursive;
+	outline: 0px;
+	letter-spacing: 4px;
+	font-size: 4vw;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+
+.title-heading-description{
+	font-family: 'Prompt', sans-serif;
+	font-size: 1.4vw;
+	line-height: 5vh;
+	text-align: justify;
+	text-justify: inter-word;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+
+.btnFlip{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 12vw;
+	height: 6vh;
+	background-color: #0FFF95;
+
+	font-family: 'Prompt', sans-serif;
+	font-size: 1.5vw;
+	font-weight: bold;
+	color: white;
+
+	border: 3px solid black;
+	border-radius: 0.5vw;
+}
+
+.btndiv{
+	display: flex;
+	justify-content: center;
+}
+
+button{
+	background-color: #0FFF95;
+	border-radius: 10px;
+	font-family: 'Prompt', sans-serif;
+	font-size: 1.5vw;
+	font-weight: bold;
+	color: white;
+	padding: 0.5% 5%;
+	outline: 2px solid white;
+	/*opacity: 0.9;
+	*/
+}
+
