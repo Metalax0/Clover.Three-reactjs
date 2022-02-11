@@ -1,4 +1,4 @@
-const Puzzle_3 = () => {
+const Puzzle_3 = ({ changeState, PuzzleDetails }) => {
   return (
     // Puzzle 3
     <div id="puzzle3" className="puzzle">
@@ -11,6 +11,17 @@ const Puzzle_3 = () => {
         className="puzzle-answer"
         type="text"
         placeholder="Write Your Answer Here"
+        onChange={(value) => {
+          PuzzleDetails.puzzleAns = value.target.value;
+          changeState({
+            puzzleID: 2,
+            puzzleAns: value.target.value,
+            ansStatus: "default",
+            bttnClassName: "checkAnswer",
+            containerClassName: "column-left",
+          });
+        }}
+        value={PuzzleDetails.puzzleAns}
       />
       <label className="puzzle-note">
         {" "}

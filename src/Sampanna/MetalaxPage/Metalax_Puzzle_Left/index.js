@@ -9,17 +9,25 @@ const MetalaxPuzzleLeft = () => {
     puzzleID: index,
     puzzleAns: "",
     ansStatus: "default", // default, correct, incorrect
+    bttnClassName: "checkAnswer",
+    containerClassName: "column-left",
   });
 
-  var puzzleToRender = [<Puzzle1 changeState = {setpuzzleDetails} PuzzleDetails = {puzzleDetails}/>, <Puzzle2 />, <Puzzle3 />]
+  var puzzleToRender = [
+    <Puzzle1 changeState={setpuzzleDetails} PuzzleDetails={puzzleDetails} />,
+    <Puzzle2 changeState={setpuzzleDetails} PuzzleDetails={puzzleDetails} />,
+    <Puzzle3 changeState={setpuzzleDetails} PuzzleDetails={puzzleDetails} />,
+  ];
 
   function bttnPrevPuzzle() {
     if (puzzleDetails.puzzleID === 2) {
-      index = 1
+      index = 1;
       setpuzzleDetails({
         puzzleID: index,
         puzzleAns: puzzleDetails.puzzleAns,
         ansStatus: "default",
+        bttnClassName: "checkAnswer",
+        containerClassName: "column-left",
       });
     } else {
       index = 0;
@@ -27,39 +35,108 @@ const MetalaxPuzzleLeft = () => {
         puzzleID: index,
         puzzleAns: puzzleDetails.puzzleAns,
         ansStatus: "default",
+        bttnClassName: "checkAnswer",
+        containerClassName: "column-left",
       });
     }
   }
 
   function bttnNextPuzzle() {
     if (puzzleDetails.puzzleID === 0) {
-      index = 1;
-      setpuzzleDetails({
-        puzzleID: index,
-        puzzleAns: puzzleDetails.puzzleAns,
-        ansStatus: "default",
-      });
+      if (puzzleDetails.ansStatus === "correct") {
+        index = 1;
+        setpuzzleDetails({
+          puzzleID: index,
+          puzzleAns: puzzleDetails.puzzleAns,
+          ansStatus: "default",
+          bttnClassName: "checkAnswer",
+          containerClassName: "column-left",
+        });
+      }
     } else {
-      index = 2;
-      setpuzzleDetails({
-        puzzleID: index,
-        puzzleAns: puzzleDetails.puzzleAns,
-        ansStatus: "default",
-      });
+      if (puzzleDetails.ansStatus === "correct") {
+        index = 2;
+        setpuzzleDetails({
+          puzzleID: index,
+          puzzleAns: puzzleDetails.puzzleAns,
+          ansStatus: "default",
+          bttnClassName: "checkAnswer",
+          containerClassName: "column-left",
+        });
+      }
     }
   }
 
   function bttnCheckAns() {
-    // ans : "NO PRESSURE NO DIAMONDS"
-    // ans : "ALAN TURING"
-    // ans : "CONGRATS YOU FOUND THE ANSWER"
-    //Check ans
+    //Checking ans
+    if (puzzleDetails.puzzleID === 0) {
+      if (puzzleDetails.puzzleAns.toUpperCase() === "NO PRESSURE NO DIAMONDS") {
+        setpuzzleDetails({
+          puzzleID: index,
+          puzzleAns: puzzleDetails.puzzleAns,
+          ansStatus: "correct",
+          bttnClassName: "checkAnswer " + "bttnCorrectAns",
+          containerClassName: "column-left " + "containerCorrectAns",
+        });
+      } else {
+        setpuzzleDetails({
+          puzzleID: index,
+          puzzleAns: puzzleDetails.puzzleAns,
+          ansStatus: "incorrect",
+          bttnClassName: "checkAnswer " + "bttnIncorrectAns",
+          containerClassName: "column-left " + "containerIncorrectAns",
+        });
+      }
+    } else if (puzzleDetails.puzzleID === 1) {
+      if (puzzleDetails.puzzleAns.toUpperCase() === "ALAN TURING") {
+        setpuzzleDetails({
+          puzzleID: index,
+          puzzleAns: puzzleDetails.puzzleAns,
+          ansStatus: "correct",
+          bttnClassName: "checkAnswer " + "bttnCorrectAns",
+          containerClassName: "column-left " + "containerCorrectAns",
+        });
+      } else {
+        setpuzzleDetails({
+          puzzleID: index,
+          puzzleAns: puzzleDetails.puzzleAns,
+          ansStatus: "incorrect",
+          bttnClassName: "checkAnswer " + "bttnIncorrectAns",
+          containerClassName: "column-left " + "containerIncorrectAns",
+        });;
+      }
+    } else if (puzzleDetails.puzzleID === 2) {
+      if (
+        puzzleDetails.puzzleAns.toUpperCase() ===
+        "CONGRATS YOU FOUND THE ANSWER"
+      ) {
+        setpuzzleDetails({
+          puzzleID: index,
+          puzzleAns: puzzleDetails.puzzleAns,
+          ansStatus: "correct",
+          bttnClassName: "checkAnswer " + "bttnCorrectAns",
+          containerClassName: "column-left " + "containerCorrectAns",
+        });
+      } else {
+        setpuzzleDetails({
+          puzzleID: index,
+          puzzleAns: puzzleDetails.puzzleAns,
+          ansStatus: "incorrect",
+          bttnClassName: "checkAnswer " + "bttnIncorrectAns",
+          containerClassName: "column-left " + "containerIncorrectAns",
+        });
+      }
+    }
+
     //Change column left and button background color (green,red)
   }
 
   return (
     // Left Column Container
-    <div className="column-left" id="Metalax-Puzzle-column-left">
+    <div
+      className={puzzleDetails.containerClassName}
+      id = "Metalax-Puzzle-column-left"
+    >
       <div id="puzzle-container">{puzzleToRender[index]}</div>
 
       <div id="puzzle-button-container">
@@ -67,7 +144,10 @@ const MetalaxPuzzleLeft = () => {
           {"<<"}
         </button>
 
-        <button className="checkAnswer" onClick={() => bttnCheckAns()}>
+        <button
+          className={puzzleDetails.bttnClassName}
+          onClick={() => bttnCheckAns()}
+        >
           CheckAnswer
         </button>
 
