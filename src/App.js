@@ -3,6 +3,7 @@ import Navigation from "./Ashrin/Navigation/Index";
 import { Route, Routes } from "react-router-dom";
 import TicTacToe from "./Ashrin/TicTacToe/Index";
 import MetalaxPage from "./Sampanna/MetalaxPage";
+import DrSeniorPage from "./Avash/DrSeniorPage";
 
 const App = () => {
   return (
@@ -11,7 +12,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Content />}></Route>
           <Route path="/sampanna" element={<MetalaxPage />}></Route>
-          {/* <Route path="/avash" element={<NotFound />}></Route>  */}
+          <Route path="/avash" element={<DrSeniorPage />}></Route> 
           <Route path="/ashrin" element={<TicTacToe />}></Route>
         </Routes>
       </Navigation>
