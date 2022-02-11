@@ -197,3 +197,7 @@ p b {
   color: #0fff95;
   border-bottom: 2px solid;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
