@@ -1,0 +1,34 @@
+
+ .grid{
+    display: grid;
+    background-color: #00E099;
+    width: 35vw;
+    height: 30vw;
+    grid-template:repeat(3,1fr)/repeat(3,1fr);
+} 
+.game{
+    display: flex;
+    border:5px solid white;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    background-color: #00E099;
+    color: black;
+}
+.output{
+    display:flex;
+    gap: 100px;
+    justify-content: center;
+    text-align: center;
+
+    
+}
+.result{
+    padding-bottom: 1vw;
+    color: #00E099;
+  
+}
+
+.maingrid{
+    padding-left: 4.2vw;
+}
