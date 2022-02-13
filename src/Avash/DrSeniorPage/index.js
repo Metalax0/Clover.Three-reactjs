@@ -3,20 +3,13 @@ import DrSeniorWCounterRight from "./DrSenior_WCounter_Right";
 import "../../index.css";
 import DrSeniorCoinFlipLeft from "./DrSenior_CoinFlip_Left";
 import DrSeniorCoinFlipRight from "./DrSenior_CoinFlip_Right";
+import MainContainer from "../../Sampanna/MainContainer";
 
 const DrSeniorPage = () => {
     return (
         <>
-            <div className="Main-Container">
-                <DrSeniorWCounterLeft />
-                <DrSeniorWCounterRight />
-            </div>
-
-            <div className="Main-Container">
-                <DrSeniorCoinFlipLeft />
-                <DrSeniorCoinFlipRight />
-            </div>
-
+            <MainContainer left_content={<DrSeniorWCounterLeft />} right_content={<DrSeniorWCounterRight />} />
+            <MainContainer left_content={<DrSeniorCoinFlipLeft />} right_content={<DrSeniorCoinFlipRight />} />
         </>
     );
 }

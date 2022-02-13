@@ -2,29 +2,50 @@ import { useState } from 'react';
 
 const DrSeniorCoinFlipLeft = () => {
 
-    const [flipcount, setFlipcount] = useState(0);
-    const [headcount, setHeadcount] = useState(0);
-    const [tailcount, setTailcount] = useState(0);
-    const [result, setResult] = useState(<p>JUST <span className="heading-color">FL</span>IP</p>);
-    const [headpercent, setHeadpercent] = useState("0");
-    const [tailpercent, setTailpercent] = useState("0");
+    const [flipdetails, setFlipdetails] = useState({
+        randomnumber: Math.floor(Math.random() * 2) + 1,
+        flipcount: 0,
+        headcount: 0,
+        tailcount: 0,
+        headpercent: 0,
+        tailpercent: 0,
+        result: <p>JUST <span className="heading-color">FL</span>IP</p>,
+    });
 
     const handleToss = () => {
-        let randomNumber = Math.floor(Math.random() * 2) + 1;
-
-        if (randomNumber === 1) {
-            setResult("Heads!");
-            setHeadcount(headcount + 1);
+        var randomnum = flipdetails.randomnumber;
+        
+        if (randomnum === 1) {
+            var hc = flipdetails.headcount + 1;
+            var total = hc + flipdetails.tailcount;
+            var hp = ((hc / total) * 100).toPrecision(3);
+            var tp = ((flipdetails.tailcount / total) * 100).toPrecision(3);
+            setFlipdetails({
+                randomnumber: Math.floor(Math.random() * 2) + 1,
+                flipcount: flipdetails.flipcount + 1,
+                headcount: hc,
+                tailcount: flipdetails.tailcount,
+                headpercent: hp,
+                tailpercent: tp,
+                result: "Heads!"
+            }
+            );
         } else {
-            setResult("Tails!");
-            setTailcount(tailcount + 1);
+            var  tc = flipdetails.tailcount + 1;
+            total = tc + flipdetails.headcount;
+            tp = ((tc / total) * 100).toPrecision(3);
+            hp = ((flipdetails.headcount / total) * 100).toPrecision(3);
+            setFlipdetails({
+                randomnumber: Math.floor(Math.random() * 2) + 1,
+                flipcount: flipdetails.flipcount + 1,
+                headcount: flipdetails.headcount,
+                tailcount: tc,
+                headpercent: hp,
+                tailpercent: tp,
+                result: "Tails!"
+            }
+            );
         }
-
-        setFlipcount(flipcount + 1);
-
-        setHeadpercent(((headcount/flipcount) * 100).toPrecision(3));
-
-        setTailpercent(((tailcount/flipcount) * 100).toPrecision(3));
     }
 
     return (
@@ -33,26 +54,26 @@ const DrSeniorCoinFlipLeft = () => {
             <div className="botton-left-container">
 
                 <div className="coinflipresult">
-                    {result}
+                    {flipdetails.result}
                 </div>
 
                 <div className="headandtailcount">
                     <div className="counts">
                         <p>Heads:</p>
-                        <p> {headcount} </p>
+                        <p> {flipdetails.headcount} </p>
 
                         <p>Tails:</p>
-                        <p> {tailcount} </p>
+                        <p> {flipdetails.tailcount} </p>
                     </div>
 
                     <div className="percents">
-                        <p>({headpercent}%)</p>
-                        <p>({tailpercent}%)</p>
+                        <p>({flipdetails.headpercent}%)</p>
+                        <p>({flipdetails.tailpercent}%)</p>
                     </div>
 
                     <div className="totalflips">
                         <p>Total Flips:</p>
-                        <p> {flipcount} </p>
+                        <p> {flipdetails.flipcount} </p>
                     </div>
                 </div>
 
