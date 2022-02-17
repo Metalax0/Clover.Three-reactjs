@@ -1,17 +1,8 @@
-img {
-  width: 1.8vw;
-  height: 1.8vw;
-}
 
 .todo-button-container img {
   width: 2.5vw;
   height: 2.5vw;
 }
-
-p b {
-  color: #0fff95;
-}
-
 input[type="checkbox"] {
   width: 2vw;
   height: 2vw;
@@ -22,34 +13,6 @@ button {
   cursor: pointer;
 }
 
-/* Applying flex property to navigation menu items*/
-.flex-navmenu {
-  display: flex;
-  gap: 9vh;
-}
-
-/* Styling nagivation bar logo (text)*/
-.navbar-logo-text {
-  font-family: "Monoton", cursive;
-  font-size: 1.2vw;
-}
-
-/* First half of title text "CLO" */
-.heading-color {
-  color: #0fff95;
-}
-
-/* Second half of title text "VER" */
-.heading-no-color {
-  color: white;
-}
-
-/* hmm */
-.active_menu {
-  color: #0fff95;
-  border-bottom: 2px solid;
-}
-
 /* Applying css to functionality section of the page */
 #Metalax-ToDo-column-right,
 #Metalax-Puzzle-column-left {
@@ -58,7 +21,7 @@ button {
   align-items: center;
 
   background-color: #00e099;
-  border: 5px solid white;
+  outline: 5px solid white;
 
   gap: 2vw;
   padding: 1vw 0;
@@ -118,14 +81,7 @@ button {
 
 /* Styling placehodler of all input fields */
 ::placeholder {
-  color: black;
-}
-
-/* Applying style to Sub headings */
-.title-heading {
-  font-family: "Bebas Neue", cursive;
-  letter-spacing: 4px;
-  font-size: 4vw;
+  color: black !important;
 }
 
 .newTask {
@@ -146,11 +102,6 @@ button {
   color: white;
   background-color: black;
   border: 3px solid white;
-}
-
-.strikedField {
-  text-decoration: line-through;
-  opacity: 0.7;
 }
 
 /*
@@ -276,7 +227,7 @@ CSS FOR PUZZLE
 }
 
 .containerCorrectAns {
-	outline: 8px solid #aaff00;
+	outline: 8px solid #aaff00 !important;
 }
 
 .bttnIncorrectAns {
@@ -284,5 +235,5 @@ CSS FOR PUZZLE
 }
 
 .containerIncorrectAns {
-  outline: 8px solid red;
+  outline: 8px solid red !important;
 }
